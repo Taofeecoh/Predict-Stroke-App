@@ -74,10 +74,11 @@ smoking_status = st.selectbox("Please select smoking status", Smoking_Status)
 hypertension_status = st.selectbox("Hypertensive? : Select 1 for YES, 0 for NO", [0,1])
 heart_disease = st.selectbox("Heart disease? : Select 1 for YES, 0 for NO",[0,1])
 
-st.sidebar.header('User Input Parameters')
-bmi = st.sidebar.slider("BMI", 0, 100, 3)
-age = st.sidebar.slider("Age", 0, 100, 18)
-avg_glucose_level = st.sidebar.slider("Average Glucose level", 0, 400, 20)
+# st.sidebar.header('User Input Parameters')
+age = st.number_input("Age", placeholder="Input age...")
+st.write(age)
+bmi = st.slider("BMI", 0, 100, 3)
+avg_glucose_level = st.slider("Average Glucose level", 0, 400, 20)
 
 show_pred = st.button("Display result")
 if show_pred:
