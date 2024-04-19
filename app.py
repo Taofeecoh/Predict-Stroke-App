@@ -66,19 +66,23 @@ Smoking_Status = (
     'Unknown'
 )
 
-# User inputs
+# User Inputs
+st.header('User Input Parameters')
+
 gender = st.selectbox("Gender", Gender)
-work_type = st.selectbox("Work type", Work_type)
-residence = st.selectbox("Residence", Residence)
-smoking_status = st.selectbox("Please select smoking status", Smoking_Status)
+age = st.number_input("Age",value = None, placeholder="Input age...")
+st.write(age)
+
 hypertension_status = st.selectbox("Hypertensive? : Select 1 for YES, 0 for NO", [0,1])
 heart_disease = st.selectbox("Heart disease? : Select 1 for YES, 0 for NO",[0,1])
+work_type = st.selectbox("Work type", Work_type)
+residence = st.selectbox("Residence", Residence)
+avg_glucose_level = st.number_input("Glucose level",value = None, placeholder="Input value...")
+bmi = st.number_input("BMI",value = None, placeholder="Input BMI...")
+st.write(bmi)
 
-# st.sidebar.header('User Input Parameters')
-age = st.number_input("Age", placeholder="Input age...")
-st.write(age)
-bmi = st.slider("BMI", 0, 100, 3)
-avg_glucose_level = st.slider("Average Glucose level", 0, 400, 20)
+smoking_status = st.selectbox("Please select smoking status", Smoking_Status)
+# st.write(avg_glucose_level)
 
 show_pred = st.button("Display result")
 if show_pred:
