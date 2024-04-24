@@ -70,19 +70,16 @@ Smoking_Status = (
 st.header('User Input Parameters')
 
 gender = st.selectbox("Gender", Gender)
-age = st.number_input("Age",value = None, placeholder="Input age...")
-st.write(age)
+age = st.number_input("Age", placeholder="Input age...")
 
 hypertension_status = st.selectbox("Hypertensive? : Select 1 for YES, 0 for NO", [0,1])
 heart_disease = st.selectbox("Heart disease? : Select 1 for YES, 0 for NO",[0,1])
 work_type = st.selectbox("Work type", Work_type)
 residence = st.selectbox("Residence", Residence)
-avg_glucose_level = st.number_input("Glucose level",value = None, placeholder="Input value...")
-bmi = st.number_input("BMI",value = None, placeholder="Input BMI...")
-st.write(bmi)
+avg_glucose_level = st.number_input("Glucose level", placeholder="Input value...")
+bmi = st.number_input("BMI", placeholder="Input BMI...")
 
 smoking_status = st.selectbox("Please select smoking status", Smoking_Status)
-# st.write(avg_glucose_level)
 
 show_pred = st.button("Display result")
 if show_pred:
@@ -93,7 +90,7 @@ if show_pred:
     X_test[:,4] = le_work.transform(X_test[:,4])
     X_test[:,5] = le_residence.transform(X_test[:,5])
     X_test[:,8] = le_smokes.transform(X_test[:,8])
-    X_test = X_test.astype(float)
+    #X_test = X_test.astype(float)
     #X_test
 
     # Make predictions
