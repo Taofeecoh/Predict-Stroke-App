@@ -76,8 +76,8 @@ hypertension_status = st.selectbox("Hypertensive? : Select 1 for YES, 0 for NO",
 heart_disease = st.selectbox("Heart disease? : Select 1 for YES, 0 for NO",[0,1])
 work_type = st.selectbox("Work type", Work_type)
 residence = st.selectbox("Residence", Residence)
-avg_glucose_level = st.number_input("Glucose level",  min_value=0, placeholder="Input value...")
-bmi = st.number_input("BMI",  min_value=0, placeholder="Input BMI...")
+avg_glucose_level = st.number_input("Average Fasting Glucose level (mg/dL)",  min_value=0, placeholder="Input value...")
+bmi = st.number_input("BMI (kg/m^2",  value=None, placeholder="Input BMI...")
 
 smoking_status = st.selectbox("Please select smoking status", Smoking_Status)
 
