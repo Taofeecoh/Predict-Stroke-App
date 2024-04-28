@@ -67,7 +67,7 @@ Smoking_Status = (
 )
 
 # User Inputs
-st.header('User Input Parameters')
+st.header('User Input')
 
 gender = st.selectbox("Gender", Gender)
 age = st.number_input("Age", min_value=18, placeholder="Input age...")
